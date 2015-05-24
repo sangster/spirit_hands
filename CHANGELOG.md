@@ -1,3 +1,6 @@
+## 2.0.0 (2015-05-27)
+* Way more configurable
+
 ## 1.0.0 (2015-02-05)
 * Downgrade [pry-byebug][pry-byebug] to v1.3.3
 
@@ -15,7 +18,7 @@
 * Using [pry-byebug][pry-byebug] to use ruby >= 2.0.0.
 * Switched [coolline][coolline] with [pry-coolline][pry-coolline]
 * Upgrade [pry][pry] to 0.10, [pry-doc][pry-doc] to 0.6
-* Rename to `JazzFingers` to allow releasing.
+* Rename to `SpiritFingers` to allow releasing.
 
 ## 0.5.2 (2013-10-24)
 
@@ -43,7 +46,7 @@
 
 * Add [pry-rails][pry-rails] 0.2.2 for maintained console hooks and new
   `show-routes`, `show-models`, and `show-middleware` commands.
-* Add `JazzHands.colored_prompt` and `JazzHands.prompt_separator` options.
+* Add `SpiritHands.colored_prompt` and `SpiritHands.prompt_separator` options.
   Detect readline library to turn off incompatible colored prompt or Unicode
   prompt separator where appropriate. Fixes #1 and #2.
 * Upgrade [pry][pry] to the latest 0.9.10, [pry-doc][pry-doc] 0.4.4,
@@ -59,7 +62,7 @@
 ## 0.3.0 (2012-06-07)
 
 * Replace [pry-nav][pry-nav] with [pry-debugger][pry-debugger] for improved
-  performance and no segfaults. `JazzHands.enable_pry_nav` removed.
+  performance and no segfaults. `SpiritHands.enable_pry_nav` removed.
 * Upgrade [pry][pry] to the latest 0.9.9, [pry-doc][pry-doc] 0.4.2,
   [pry-git][pry-git] 0.2.3, [pry-stack_explorer][pry-stack_explorer] 0.4.2,
   [pry-remote][pry-remote] 0.1.4, [coderay][coderay] 1.0.6.
@@ -83,10 +86,10 @@
 ## 0.1.0 (2012-01-04)
 
 * For performance, enable [pry-nav][pry-nav] only on MRI 1.9.3 by default. To
-  use on MRI 1.9.2, add `JazzHands.enable_pry_nav` to a Rails initializer.
+  use on MRI 1.9.2, add `SpiritHands.enable_pry_nav` to a Rails initializer.
 * Due to buggy behavior, syntax highlighting as you type via
   [Coolline][coolline] and [Coderay][coderay] is disabled by default. Enable
-  with `JazzHands.enable_syntax_highlighting_as_you_type` in a Rails
+  with `SpiritHands.enable_syntax_highlighting_as_you_type` in a Rails
   initializer. MRI 1.9.3 only.
 * Fix [Hirb][hirb] support.
 * Upgrade [awesome_print][awesome_print] to 1.0.2.

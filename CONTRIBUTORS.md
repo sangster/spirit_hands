@@ -7,3 +7,4 @@
 * Fernando Paredes <nano@fdp.io>
 * Micah Gates <github@mgates.com>
 * Paulo Henrique Lopes Ribeiro <plribeiro3000@gmail.com>
+* Barry Allard <barry.allard@gmail.com>
