@@ -1,5 +1,25 @@
+# Adds Hirb.enabled?
 require 'hirb'
 require 'pry'
+
+module Hirb
+  class << self
+    @enabled = false
+    def enabled?
+      !!@enabled
+    end
+
+    protected
+
+    def set_enabled
+      @enabled = true
+    end
+
+    def set_disabled
+      @enabled = false
+    end
+  end
+end
 
 class << Hirb::View
   alias_method :enable_output_method_existing, :enable_output_method
@@ -7,12 +27,12 @@ class << Hirb::View
 
   def enable_output_method
     @output_method = true
-    JazzFingers._hirb_output = true
+    ::Hirb.send :set_enabled
     enable_output_method_existing
   end
 
   def disable_output_method
-    JazzFingers._hirb_output = false
+    ::Hirb.send :set_disabled
     disable_output_method_existing
   end
 end
