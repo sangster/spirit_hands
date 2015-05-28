@@ -10,7 +10,7 @@ hard-working hands!
 * [**Pry**][pry] for a powerful shell alternative to IRB.
 * [**Awesome Print**][awesome_print] for stylish pretty print.
 * [**Hirb**][hirb] for tabular collection output.
-* [**Hirb Unicode**][hirb-unicode-steakknife] for aligned Unicode output1.
+* [**Hirb Unicode**][hirb-unicode-steakknife] for aligned Unicode output.
 * [**Pry Rails**][pry-rails] for additional commands (`show-routes`,
   `show-models`, `show-middleware`) in the Rails console.
 * [**Pry Doc**][pry-doc] to browse Ruby source, including C, directly from the
