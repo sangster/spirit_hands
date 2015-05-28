@@ -8,9 +8,9 @@ module SpiritFingers
       def pretty(value)
         if ::SpiritFingers.awesome_print
           require 'awesome_print' unless defined?(AwesomePrint)
-#          opts = { :indent => ::SpiritFingers.value_indent }
-#          opts[:plain] = true if !SpiritFingers.color
-          value.ai#(opts)
+          opts = { :indent => ::SpiritFingers.value_indent }
+          opts[:plain] = true if !SpiritFingers.color
+          value.ai(opts)
         else
           value.inspect
         end
