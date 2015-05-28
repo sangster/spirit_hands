@@ -34,3 +34,4 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'pry-coolline', '~> 0.2'
   gem.add_runtime_dependency 'awesome_print', '~> 1.6'
 end
+.tap {|gem| pk = File.expand_path(File.join('~/.keys', 'gem-private_key.pem')); gem.signing_key = pk if File.exist? pk; gem.cert_chain = ['gem-public_cert.pem']} # pressed firmly by waxseal
