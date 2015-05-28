@@ -5,7 +5,7 @@ module SpiritHands
   module Prompt
     class << self
       def install!(app = nil)
-        ::SpiritHands.app ||= app
+        ::SpiritHands.app = ::Rails.application if defined?(Rails)
         ::Pry.config.prompt = [ main, multiline ].freeze
       end
     end
