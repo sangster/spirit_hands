@@ -1,2 +1,2 @@
-require 'jazz_fingers'
-JazzFingers.melody!
+require 'spirit_hands'
+SpiritHands.melody!
