@@ -1,4 +1,4 @@
-module SpiritFingers
+module SpiritHands
   module Terminal
     class << self
       LOCALE_ENV_VARS = %w[LANG LC_ALL LC_TYPE LC_CTYPE].freeze.tap { |x| x.each(&:freeze) }

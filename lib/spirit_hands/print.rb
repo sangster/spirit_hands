@@ -1,4 +1,4 @@
-module SpiritFingers
+module SpiritHands
   module Print
     class << self
       def install!
@@ -6,10 +6,10 @@ module SpiritFingers
       end
 
       def pretty(value)
-        if ::SpiritFingers.awesome_print
+        if ::SpiritHands.awesome_print
           require 'awesome_print' unless defined?(AwesomePrint)
-          opts = { :indent => ::SpiritFingers.value_indent }
-          opts[:plain] = true if !SpiritFingers.color
+          opts = { :indent => ::SpiritHands.value_indent }
+          opts[:plain] = true if !SpiritHands.color
           value.ai(opts)
         else
           value.inspect
@@ -29,17 +29,17 @@ module SpiritFingers
           setup_hirb_unicode
           return if ::Hirb::View.view_or_page_output(value)
         end
-        _pry_.pager.page("#{::SpiritFingers.value_prompt}#{pretty(value)}")
+        _pry_.pager.page("#{::SpiritHands.value_prompt}#{pretty(value)}")
       end
 
       private
 
       PRINT_FUNCTION = ->(_output, value, _pry_) do
-        ::SpiritFingers::Print.print(_output, value, _pry_)
+        ::SpiritHands::Print.print(_output, value, _pry_)
       end
 
       def hirb_unicode_enable
-        return false unless ::SpiritFingers::Terminal.unicode?
+        return false unless ::SpiritHands::Terminal.unicode?
         require 'hirb/unicode'
 
         ::Hirb::Formatter.dynamic_config.keys.each do |key|
@@ -58,8 +58,8 @@ module SpiritFingers
       end
 
       def setup_hirb_unicode
-        if hirb_unicode_enabled? != SpiritFingers.hirb_unicode
-          if SpiritFingers.hirb_unicode
+        if hirb_unicode_enabled? != SpiritHands.hirb_unicode
+          if SpiritHands.hirb_unicode
             hirb_unicode_enable
           else
             hirb_unicode_disable

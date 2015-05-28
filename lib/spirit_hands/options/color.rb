@@ -1,4 +1,4 @@
-module SpiritFingers
+module SpiritHands
   class << self
     # Alias for Pry.color
     def color

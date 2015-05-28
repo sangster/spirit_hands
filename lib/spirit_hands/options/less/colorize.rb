@@ -1,6 +1,6 @@
 require 'shellwords'
 
-module SpiritFingers
+module SpiritHands
   class << self
     # Allow less to display colorized output (default: true)
     # (If, set updates LESS env var)

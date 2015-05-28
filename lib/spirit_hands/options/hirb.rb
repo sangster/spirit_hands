@@ -1,6 +1,6 @@
-autoload :Hirb, 'spirit_fingers/hirb'
+autoload :Hirb, 'spirit_hands/hirb'
 
-module SpiritFingers
+module SpiritHands
   class << self
     # Is hirb enabled?
     def hirb
