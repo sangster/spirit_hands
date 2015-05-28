@@ -18,8 +18,12 @@ module SpiritHands
 
   # Name of the app, which can be displayed to <app/> tag in prompt
   mattr_accessor_with_default :app, -> {
-    # Trumpet emoji or pry
-    (Terminal.unicode?) ? "\u{1F3BA}" : 'pry'
+    if defined?(::Rails)
+      ::Rails.application
+    else
+      # Trumpet emoji or pry
+      (Terminal.unicode?) ? "\u{1F3BA}" : 'pry'
+    end
   }
 
   # <color>...</color>
