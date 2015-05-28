@@ -7,7 +7,7 @@ module SpiritFingers
       ::Hirb.enabled?
     end
 
-    # Set whether hirb is enabled (default: false)
+    # Set whether hirb is enabled (default: true)
     def hirb=(h)
       h = DEFAULT_HIRB if h.nil?
       if hirb != h
@@ -27,7 +27,7 @@ module SpiritFingers
     end
   end
 
-  DEFAULT_HIRB = false
+  DEFAULT_HIRB = true
 
   # Whether to use hirb/unicode when hirb is enabled (default: true)
   mattr_accessor_with_default :hirb_unicode, true

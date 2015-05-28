@@ -1,7 +1,6 @@
-Spirit Fingers
-============
+# Spirit Fingers
 
-This repo is a fork, with updates and bug fixes based on [`spirit_hands`](https://github.com/nixme/spirit_hands).
+This repo is an improved fork with real configuration syntax, with updates and bug fixes based on [`jazz_hands`](https://github.com/nixme/jazz_hands).
 
 Spending hours in the rails console? Spruce it up and show off those
 hard-working hands!
@@ -24,7 +23,9 @@ hard-working hands!
 
 ## Usage
 
-Ruby 2.0.0+, Rails 3 or 4 only. Add to your project Gemfile:
+### Rails or Ruby Project Integration
+
+Ruby 2.0.0+, Rails 3 or 4 or Ruby project, add this to your project Gemfile:
 
 ```ruby
 group :development, :test do
@@ -32,10 +33,10 @@ group :development, :test do
 end
 ```
 
+### Global usage
+ `[sudo] gem install spirit_fingers`
+
 That's it. Run `rails console` as usual.
-
-* [**Hirb**)](hirb) isn't enabled by default. To use, run `Hirb.enable` in the console. (or `SpiritFingers.hirb = true # or false to disable`)
-
 
 Ruby compiled against a proper readline library, ideally GNU readline, is
 recommended. Alternatively, [`gem install rb-readline`][rb-readline] for an
@@ -52,7 +53,7 @@ Change the following options by creating a .pryrc  in your Rails or Ruby project
 ```ruby
 if defined?(SpiritFingers)
   SpiritFingers.colored_prompt = false
-  SpiritFingers.hirb = true
+  SpiritFingers.hirb = false
 end
 ```
 
@@ -63,7 +64,7 @@ end
 
 ### `color`
 
-An alias for getting or setting `Pry.color`
+An alias for getting and setting `Pry.color`
 
 ### `colored_prompt`
 
@@ -74,8 +75,8 @@ characters in colored prompts. `false` for libedit.
 **Note:** `Pry.color = false` trumps this setting and disables all console coloring.
 
 ### `hirb`
-[**Hirb**][hirb] is **disabled** by default.
-`SpiritFingers.hirb = true` to enable.
+[**Hirb**][hirb] is **enabled** by default.
+`SpiritFingers.hirb = false` to disable.
 
 ### `hirb_unicode`
 [**Hirb-unicode**][hirb-unicode] is enabled by default when hirb is enabled.
@@ -127,6 +128,6 @@ mixed encodings.
 [pry-coolline]:             https://github.com/pry/pry-coolline
 [coderay]:                  https://github.com/rubychan/coderay
 [rb-readline]:              https://github.com/luislavena/rb-readline
-[pullrequests]:             https://github.com/plribeiro3000/spirit_fingers/pulls
-[issues]:                   https://github.com/plribeiro3000/spirit_fingers/issues
-[changelog]:                https://github.com/plribeiro3000/spirit_fingers/blob/master/CHANGELOG.md
+[pullrequests]:             https://github.com/steakknife/spirit_fingers/pulls
+[issues]:                   https://github.com/steakknife/spirit_fingers/issues
+[changelog]:                https://github.com/steakknife/spirit_fingers/blob/master/CHANGELOG.md
