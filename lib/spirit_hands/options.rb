@@ -1,12 +1,12 @@
 # encoding: UTF-8
 require 'readline'
-require 'spirit_fingers/mattr_accessor_with_default'
-require 'spirit_fingers/options/color'
-require 'spirit_fingers/options/less'
-require 'spirit_fingers/options/hirb'
+require 'spirit_hands/mattr_accessor_with_default'
+require 'spirit_hands/options/color'
+require 'spirit_hands/options/less'
+require 'spirit_hands/options/hirb'
 
-module SpiritFingers
-  autoload :Terminal, 'spirit_fingers/terminal'
+module SpiritHands
+  autoload :Terminal, 'spirit_hands/terminal'
 
   ### Options ###
 
@@ -25,8 +25,8 @@ module SpiritFingers
   # <color>...</color>
   # <bold>...</color>
   # <cmd/>  command number
-  # <app/>  SpiritFingers.app, which can be String or a Rails Applicatino object
-  # <sep/>  SpiritFingers.prompt_separator
+  # <app/>  SpiritHands.app, which can be String or a Rails Applicatino object
+  # <sep/>  SpiritHands.prompt_separator
   #
   # Use \ to escape literal <, so in a Ruby string constant, "\\<"
   #

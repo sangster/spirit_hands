@@ -5,7 +5,7 @@ This repo is an improved fork with real configuration syntax, with updates and b
 Spending hours in the rails console? Spruce it up and show off those
 hard-working hands!
 
-**spirit_fingers** is an opinionated set of console-related gems and a bit of glue:
+**spirit_hands** is an opinionated set of console-related gems and a bit of glue:
 
 * [**Pry**][pry] for a powerful shell alternative to IRB.
 * [**Awesome Print**][awesome_print] for stylish pretty print.
@@ -29,12 +29,12 @@ Ruby 2.0.0+, Rails 3 or 4 or Ruby project, add this to your project Gemfile:
 
 ```ruby
 group :development, :test do
-  gem 'spirit_fingers'
+  gem 'spirit_hands'
 end
 ```
 
 ### Global usage
- `[sudo] gem install spirit_fingers`
+ `[sudo] gem install spirit_hands`
 
 That's it. Run `rails console` as usual.
 
@@ -51,16 +51,16 @@ Change the following options by creating a .pryrc  in your Rails or Ruby project
 ### Example `.pryrc`
 
 ```ruby
-if defined?(SpiritFingers)
-  SpiritFingers.colored_prompt = false
-  SpiritFingers.hirb = false
+if defined?(SpiritHands)
+  SpiritHands.colored_prompt = false
+  SpiritHands.hirb = false
 end
 ```
 
 ### `awesome_print`
 
 [**AwesomePrint**][awesome_print] is enabled by default.
-`SpiritFingers.awesome_print = false` to disable.
+`SpiritHands.awesome_print = false` to disable.
 
 ### `color`
 
@@ -76,11 +76,11 @@ characters in colored prompts. `false` for libedit.
 
 ### `hirb`
 [**Hirb**][hirb] is **enabled** by default.
-`SpiritFingers.hirb = false` to disable.
+`SpiritHands.hirb = false` to disable.
 
 ### `hirb_unicode`
 [**Hirb-unicode**][hirb-unicode] is enabled by default when hirb is enabled.
-`SpiritFingers.hirb_unicode = false` to disable.  
+`SpiritHands.hirb_unicode = false` to disable.  
 No effect when hirb is disabled.
 
 
@@ -106,7 +106,7 @@ No effect when hirb is disabled.
 
    Even the frightening blink tag, where available <blink>...</blink>
 
-More at: SpiritFingers::Prompt::Render::MATCHED_TAG_CODES.keys
+More at: SpiritHands::Prompt::Render::MATCHED_TAG_CODES.keys
 
 ```
 
@@ -128,6 +128,6 @@ mixed encodings.
 [pry-coolline]:             https://github.com/pry/pry-coolline
 [coderay]:                  https://github.com/rubychan/coderay
 [rb-readline]:              https://github.com/luislavena/rb-readline
-[pullrequests]:             https://github.com/steakknife/spirit_fingers/pulls
-[issues]:                   https://github.com/steakknife/spirit_fingers/issues
-[changelog]:                https://github.com/steakknife/spirit_fingers/blob/master/CHANGELOG.md
+[pullrequests]:             https://github.com/steakknife/spirit_hands/pulls
+[issues]:                   https://github.com/steakknife/spirit_hands/issues
+[changelog]:                https://github.com/steakknife/spirit_hands/blob/master/CHANGELOG.md

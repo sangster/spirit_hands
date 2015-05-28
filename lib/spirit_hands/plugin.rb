@@ -1,4 +1,4 @@
-module SpiritFingers
+module SpiritHands
   class << self
     # A thin wrapper around require for troubleshooting
     def plugin(*requires)

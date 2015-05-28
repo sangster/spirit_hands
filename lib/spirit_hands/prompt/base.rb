@@ -1,4 +1,4 @@
-module SpiritFingers
+module SpiritHands
   module Prompt
     class << self
       private
@@ -98,13 +98,13 @@ module SpiritFingers
           elsif app
             app.to_s
           else
-            ::SpiritFingers.app
+            ::SpiritHands.app
           end
         },
 
-        # <sep/>: SpiritFingers.prompt_separator
+        # <sep/>: SpiritHands.prompt_separator
         'sep' => ->(_state) {
-          ::SpiritFingers.prompt_separator
+          ::SpiritHands.prompt_separator
         }
       }
 
@@ -115,7 +115,7 @@ module SpiritFingers
         errors.any?
       end
 
-      # :state   SpiritFingers::Prompt::State
+      # :state   SpiritHands::Prompt::State
       # :prompt  String
       # :color   true or false/nil
       def initialize(state, prompt, color)

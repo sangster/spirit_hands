@@ -1,11 +1,11 @@
-require 'spirit_fingers/prompt/main'
-require 'spirit_fingers/prompt/multiline'
+require 'spirit_hands/prompt/main'
+require 'spirit_hands/prompt/multiline'
 
-module SpiritFingers
+module SpiritHands
   module Prompt
     class << self
       def install!(app = nil)
-        ::SpiritFingers.app ||= app
+        ::SpiritHands.app ||= app
         ::Pry.config.prompt = [ main, multiline ].freeze
       end
     end

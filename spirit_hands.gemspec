@@ -1,19 +1,19 @@
 # -*- encoding: utf-8 -*-
 
 $:.unshift File.expand_path('../lib', __FILE__)
-module ::SpiritFingers
-  autoload :VERSION, 'spirit_fingers/version'
+module ::SpiritHands
+  autoload :VERSION, 'spirit_hands/version'
 end
 
 Gem::Specification.new do |gem|
-  gem.name          = 'spirit_fingers'
-  gem.version       = SpiritFingers::VERSION
+  gem.name          = 'spirit_hands'
+  gem.version       = SpiritHands::VERSION
   gem.author        = 'Barry Allard'
   gem.email         = 'barry.allard@gmail.com'
   gem.license       = 'MIT'
-  gem.homepage      = 'https://github.com/steakknife/spirit_fingers'
+  gem.homepage      = 'https://github.com/steakknife/spirit_hands'
   gem.summary       = 'Exercise those fingers. Pry-based enhancements for the default Rails console.'
-  gem.description   = "Spending hours in the rails console? Spruce it up and show off those hard-working hands! spirit_fingers replaces IRB with Pry, improves output through awesome_print, and has some other goodies up its sleeves."
+  gem.description   = "Spending hours in the rails console? Spruce it up and show off those hard-working hands! spirit_hands replaces IRB with Pry, improves output through awesome_print, and has some other goodies up its sleeves."
 
   gem.executables   = `git ls-files -z -- bin/*`.split("\0")
     .select { |f| File.executable?(f) }
