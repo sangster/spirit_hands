@@ -51,9 +51,11 @@ Change the following options by creating a .pryrc  in your Rails or Ruby project
 ### Example `.pryrc`
 
 ```ruby
-if defined?(SpiritHands)
+begin
+  require 'spirit_hands'
   SpiritHands.colored_prompt = false
   SpiritHands.hirb = false
+rescue LoadError
 end
 ```
 
