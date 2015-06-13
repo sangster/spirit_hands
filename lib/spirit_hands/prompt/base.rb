@@ -152,7 +152,7 @@ module SpiritHands
         when '/'
           # close: </
           # single <.+/
-          @tag_type = (@tag.blank?) ? :close : :single
+          @tag_type = (@tag.nil? || @tag.empty?) ? :close : :single
         when '>' # close tag
           @tag.downcase!
           send @tag_type # :start, :close or :single
