@@ -81,7 +81,7 @@ characters in colored prompts. `false` for libedit.
 `SpiritHands.hirb = false` to disable.
 
 ### `hirb_unicode`
-[**Hirb-unicode**][hirb-unicode] is enabled by default when hirb is enabled.
+[**Hirb-unicode**][hirb-unicode-steakknife] is enabled by default when hirb is enabled.
 `SpiritHands.hirb_unicode = false` to disable.  
 No effect when hirb is disabled.
 
