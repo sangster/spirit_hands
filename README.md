@@ -1,4 +1,4 @@
-# Spirit Fingers
+# Spirit Hands
 
 This repo is an improved fork with real configuration syntax, with updates and bug fixes based on [`jazz_hands`](https://github.com/nixme/jazz_hands).
 
