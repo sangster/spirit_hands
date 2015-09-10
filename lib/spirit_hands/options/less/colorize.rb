@@ -1,7 +1,12 @@
 require 'shellwords'
 
 module SpiritHands
+  DEFAULT_LESS_COLORIZE = true
+  LESS_R_LONG = '--RAW-CONTROL-CHARS'.freeze
+  LESS_R = /\A(.*-[^-R]*)R(.*)\z/.freeze
+
   class << self
+
     # Allow less to display colorized output (default: true)
     # (If, set updates LESS env var)
     def less_colorize
@@ -33,10 +38,4 @@ module SpiritHands
       self.less_colorize = nil unless @less_colorize
     end
   end
-
-  private
-
-  DEFAULT_LESS_COLORIZE = true
-  LESS_R_LONG = '--RAW-CONTROL-CHARS'.freeze
-  LESS_R = /\A(.*-[^-R]*)R(.*)\z/.freeze
 end

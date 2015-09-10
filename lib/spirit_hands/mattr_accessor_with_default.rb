@@ -41,8 +41,4 @@ class Module
       end
     end
   end
-
-  private
-
-  NO_OP = -> { }.freeze
-end
+end # Module

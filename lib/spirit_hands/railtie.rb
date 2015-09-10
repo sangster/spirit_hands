@@ -4,4 +4,4 @@ class Railtie < Rails::Railtie
       ::SpiritHands.melody!(app)
     end
   end
-end
+end # Railtie
