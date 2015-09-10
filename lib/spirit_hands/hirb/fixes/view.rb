@@ -7,4 +7,4 @@ class << Hirb::View
     view_output(str) ||
       page_output(::SpiritHands::Print.pretty(str), true)
   end
-end
+end # Hirb::View.self

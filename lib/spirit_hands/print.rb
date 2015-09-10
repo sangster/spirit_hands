@@ -1,6 +1,10 @@
 module SpiritHands
   module Print
     class << self
+      PRINT_FUNCTION = ->(_output, value, _pry_) do
+        ::SpiritHands::Print.print(_output, value, _pry_)
+      end
+
       def install!
         ::Pry.config.print = PRINT_FUNCTION
       end
@@ -34,10 +38,6 @@ module SpiritHands
 
       private
 
-      PRINT_FUNCTION = ->(_output, value, _pry_) do
-        ::SpiritHands::Print.print(_output, value, _pry_)
-      end
-
       def hirb_unicode_enable
         return false unless ::SpiritHands::Terminal.unicode?
         require 'hirb/unicode'
@@ -67,6 +67,6 @@ module SpiritHands
         end
         nil
       end
-    end
-  end
-end
+    end # self
+  end # Print
+end # SpiritHands

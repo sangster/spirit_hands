@@ -2,24 +2,22 @@
 require 'hirb'
 require 'pry'
 
-module Hirb
-  class << self
-    @enabled = false
-    def enabled?
-      !!@enabled
-    end
-
-    protected
-
-    def set_enabled
-      @enabled = true
-    end
-
-    def set_disabled
-      @enabled = false
-    end
+class << Hirb
+  @enabled = false
+  def enabled?
+    !!@enabled
   end
-end
+
+  protected
+
+  def set_enabled
+    @enabled = true
+  end
+
+  def set_disabled
+    @enabled = false
+  end
+end # Hirb.self
 
 class << Hirb::View
   alias_method :enable_output_method_existing, :enable_output_method
@@ -35,4 +33,4 @@ class << Hirb::View
     ::Hirb.send :set_disabled
     disable_output_method_existing
   end
-end
+end # Hirb::View.self

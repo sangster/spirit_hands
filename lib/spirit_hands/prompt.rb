@@ -4,9 +4,9 @@ require 'spirit_hands/prompt/multiline'
 module SpiritHands
   module Prompt
     class << self
-      def install!(app = nil)
+      def install!
         ::Pry.config.prompt = [ main, multiline ].freeze
       end
-    end
-  end
-end
+    end # self
+  end # Prompt
+end # SpiritHands

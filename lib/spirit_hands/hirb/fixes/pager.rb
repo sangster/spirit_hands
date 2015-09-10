@@ -140,5 +140,5 @@ module Hirb
     def resize(width, height) #:nodoc:
       @width, @height = View.determine_terminal_size(width, height)
     end
-  end
-end
+  end # Pager
+end # Hirb

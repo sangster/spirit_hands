@@ -1,6 +1,9 @@
 require 'shellwords'
 
 module SpiritHands
+  DEFAULT_LESS_SHOW_RAW_UNICODE = true
+  LESS_SHOW_RAW_BINFMT = '*n%c'.freeze
+
   class << self
     # Allow less to display colorized output (default: true)
     # (If, set updates LESS env var)
@@ -30,9 +33,4 @@ module SpiritHands
       self.less_show_raw_unicode = nil unless @less_show_raw_unicode
     end
   end
-
-  private
-
-  DEFAULT_LESS_SHOW_RAW_UNICODE = true
-  LESS_SHOW_RAW_BINFMT = '*n%c'.freeze
 end

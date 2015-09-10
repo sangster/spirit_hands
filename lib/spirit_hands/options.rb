@@ -6,8 +6,6 @@ require 'spirit_hands/options/less'
 require 'spirit_hands/options/hirb'
 
 module SpiritHands
-  autoload :Terminal, 'spirit_hands/terminal'
-
   ### Options ###
 
   # When printing values, start with this (default: '=> ')
