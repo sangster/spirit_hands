@@ -99,7 +99,7 @@ def bump(idx)
   sh "sed -i '' -e 's/#{old_version}/#{new_version}/' #{version_file}"
   sh "git add #{version_file}"
   sh "git commit -sS -m 'bump to #{new_version}'"
-  sh "git push --tags HEAD"
+  sh "git push --tags origin HEAD"
 end
 
 desc 'bump release version'
