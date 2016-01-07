@@ -28,7 +28,11 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'pry-doc', '~> 0.8'
   gem.add_runtime_dependency 'pry-git', '~> 0.2'
   gem.add_runtime_dependency 'pry-remote', '~> 0.1'
-  gem.add_runtime_dependency 'pry-byebug', '~> 3.2'
+  if RUBY_PLATFORM == 'java'
+    gem.add_runtime_dependency 'pry-nav', '~> 3.2'
+  else
+    gem.add_runtime_dependency 'pry-byebug', '~> 3.2'
+  end
   gem.add_runtime_dependency 'hirb', '~> 0.7'
   gem.add_runtime_dependency 'hirb-unicode-steakknife', '~> 0.0'
   gem.add_runtime_dependency 'pry-coolline', '~> 0.2'
