@@ -19,6 +19,7 @@ hard-working hands!
   commits on methods and classes, not just files.
 * [**Pry Remote**][pry-remote] to connect remotely to a Pry console.
 * [**Pry Coolline**][pry-coolline] for syntax highlighting as you type.
+* **Debugging** (`next`, `step`, ...): Ruby (MRI) [**Pry Byebug**][pry-byebug], JRuby [**Pry Nav**][pry-nav].
 
 
 ## Usage
@@ -133,3 +134,5 @@ mixed encodings.
 [pullrequests]:             https://github.com/steakknife/spirit_hands/pulls
 [issues]:                   https://github.com/steakknife/spirit_hands/issues
 [changelog]:                https://github.com/steakknife/spirit_hands/blob/master/CHANGELOG.md
+[pry-nav]:                  https://github.com/nixme/pry-nav
+[pry-byebug]:               https://github.com/deivid-rodriguez/pry-byebug
