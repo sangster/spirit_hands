@@ -33,7 +33,10 @@ module SpiritHands
           setup_hirb_unicode
           return if ::Hirb::View.view_or_page_output(value)
         end
-        _pry_.pager.page("#{::SpiritHands.value_prompt}#{pretty(value)}")
+        _pry_.pager.open do |pager|
+          pager.print ::SpiritHands.value_prompt
+          pager.puts pretty(value)
+        end
       end
 
       private

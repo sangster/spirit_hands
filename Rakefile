@@ -2,6 +2,7 @@
 
 require 'bundler/gem_tasks'
 
+require 'shellwords'
 
 def gemspec_file
   @gemspec_file ||= Dir['*.gemspec'].first
@@ -48,6 +49,8 @@ def assert_gem_is_signed(gem)
   fail "#{gem} is unsigned, check gem-public_cert.pem" if !missing_files.empty?
 end
 
+### release ruby gem
+
 desc 'make the current git commit into a tag equal the current version.rb'
 task :tag do
   assert_git_clean
@@ -58,8 +61,6 @@ end
 
 desc 'before any release(s)'
 task :prerelease => [:tag]
-
-require 'shellwords'
 
 def gem_build(chruby_engine)
   rubies_dir = ENV['RUBIES_ROOT'] || '/opt/rubies'
@@ -86,6 +87,9 @@ end
 
 desc 'release all gems'
 task :release => ['release-ruby', 'release-jruby']
+
+
+## version bumping
 
 def bump(idx)
   assert_git_clean
