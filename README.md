@@ -16,7 +16,7 @@ hard-working hands!
 * [**Pry Doc**][pry-doc] to browse Ruby source, including C, directly from the
   console.
 * [**Pry Git**][pry-git] to teach the console about git. Diffs, blames, and
-  commits on methods and classes, not just files.
+  commits on methods and classes, not just files. (non-JRuby only)
 * [**Pry Remote**][pry-remote] to connect remotely to a Pry console.
 * [**Pry Coolline**][pry-coolline] for syntax highlighting as you type.
 * **Debugging** (`next`, `step`, ...): Ruby (MRI) [**Pry Byebug**][pry-byebug], JRuby [**Pry Nav**][pry-nav].
