@@ -56,7 +56,7 @@ task :tag do
   assert_git_clean
   return if `git tag --points-at HEAD`.split("\n").map(&:strip).include?(version)
   sh "git tag -s #{version} -m #{version}"
-  sh "git push --tags HEAD"
+  sh "git push --tags origin master"
 end
 
 desc 'before any release(s)'
@@ -103,7 +103,7 @@ def bump(idx)
   sh "sed -i '' -e 's/#{old_version}/#{new_version}/' #{version_file}"
   sh "git add #{version_file}"
   sh "git commit -sS -m 'bump to #{new_version}'"
-  sh "git push --tags origin HEAD"
+  sh "git push --tags origin master"
 end
 
 desc 'bump release version'
