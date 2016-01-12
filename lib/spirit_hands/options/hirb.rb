@@ -1,4 +1,4 @@
-autoload :Hirb, 'spirit_hands/hirb'
+require 'spirit_hands/hirb'
 
 module SpiritHands
   class << self
