@@ -65,12 +65,12 @@ task :prerelease => [:tag]
 def gem_build(chruby_engine)
   rubies_dir = ENV['RUBIES_ROOT'] || '/opt/rubies'
   rubies = Dir[File.join(rubies_dir, '*')]
-  rubies_escaped = rubies.map { |rb| Shellwords.escape rb }
+  rubies_escaped = rubies.map { |rb| Shellwords.escape rb }.join(' ')
   sh "chruby-exec RUBIES=(#{rubies_escaped}) #{chruby_engine} -- gem build #{gemspec_file}"
 end
 
 desc 'release JRuby gem'
-task 'release-jruby' => :prerelease do
+task 'release-jruby' do #=> :prerelease do
   gem_build('jruby')
   gem = gem_file('java')
   assert_gem_is_signed(gem)
