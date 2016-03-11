@@ -15,6 +15,7 @@ end
 require 'spirit_hands/options'
 require 'spirit_hands/melody'
 if defined? ::Rails
+  require 'pry-rails'
   require 'spirit_hands/railtie'
 else
   SpiritHands.melody!
