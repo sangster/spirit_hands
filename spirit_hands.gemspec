@@ -32,7 +32,7 @@ Gem::Specification.new do |gem|
     gem.add_runtime_dependency 'pry-nav', '~> 0.2.4'
   else
     gem.add_runtime_dependency 'pry-git', '~> 0.2'
-    gem.add_runtime_dependency 'pry-byebug', '~> 3.2'
+    gem.add_runtime_dependency 'pry-byebug', '1.3.3'
   end
   gem.add_runtime_dependency 'hirb', '~> 0.7'
   gem.add_runtime_dependency 'hirb-unicode-steakknife', '~> 0.0'
