@@ -26,7 +26,7 @@ hard-working hands!
 
 ### Rails or Ruby Project Integration
 
-Ruby 2.0.0+, Rails 3 or 4 or Ruby project, add this to your project Gemfile:
+Ruby 2.0.0+, Rails 3, 4 or 5 Ruby project, add this to your project Gemfile:
 
 ```ruby
 group :development, :test do
