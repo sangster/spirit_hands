@@ -15,7 +15,6 @@ hard-working hands!
   `show-models`, `show-middleware`) in the Rails console.
 * [**Pry Doc**][pry-doc] to browse Ruby source, including C, directly from the
   console.
-* [**Pry Git**][pry-git] to teach the console about git. Diffs, blames, and
   commits on methods and classes, not just files. (non-JRuby only)
 * [**Pry Remote**][pry-remote] to connect remotely to a Pry console.
 * [**Pry Coolline**][pry-coolline] for syntax highlighting as you type.
@@ -128,7 +127,6 @@ mixed encodings.
 [hirb-unicode-steakknife]:  https://github.com/steakknife/hirb-unicode
 [pry-rails]:                https://github.com/rweng/pry-rails
 [pry-doc]:                  https://github.com/pry/pry-doc
-[pry-git]:                  https://github.com/pry/pry-git
 [pry-remote]:               https://github.com/Mon-Ouie/pry-remote
 [pry-coolline]:             https://github.com/pry/pry-coolline
 [coderay]:                  https://github.com/rubychan/coderay
