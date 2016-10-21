@@ -31,7 +31,6 @@ Gem::Specification.new do |gem|
     gem.platform = 'java'
     gem.add_runtime_dependency 'pry-nav', '~> 0.2.4'
   else
-    gem.add_runtime_dependency 'pry-git', '~> 0.2'
     gem.add_runtime_dependency 'pry-byebug', '1.3.3'
   end
   gem.add_runtime_dependency 'hirb', '~> 0.7'
