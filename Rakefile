@@ -100,7 +100,7 @@ def bump(idx)
   new_version = v.map(&:to_s).join('.')
 
   version_file = 'lib/spirit_hands/version.rb'
-  sh "sed -i '' -e 's/#{old_version}/#{new_version}/' #{version_file}"
+  sh "sed -i'' -e 's/#{old_version}/#{new_version}/' #{version_file}"
   sh "git add #{version_file}"
   sh "git commit -sS -m 'bump to #{new_version}'"
   sh "git push --tags origin master"
