@@ -97,6 +97,7 @@ def bump(idx)
   old_version = version.to_s
   v = old_version.split('.').map(&:to_i)
   v[idx] += 1
+  (v.size-idx-1).times { |i| v[idx+1+i] = 0 }
   new_version = v.map(&:to_s).join('.')
 
   version_file = 'lib/spirit_hands/version.rb'
