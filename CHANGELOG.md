@@ -1,3 +1,6 @@
+## 2.1.0 (2016-11-19)
+* Remove [pry-remote][pry-remote]
+
 ## 2.0.0 (2015-05-27)
 * Way more configurable
 
