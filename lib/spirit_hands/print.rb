@@ -1,3 +1,5 @@
+require 'awesome_print'
+
 module SpiritHands
   module Print
     class << self
@@ -11,7 +13,6 @@ module SpiritHands
 
       def pretty(value)
         if ::SpiritHands.awesome_print
-          require 'awesome_print' unless defined?(AwesomePrint)
           opts = { :indent => ::SpiritHands.value_indent }
           opts[:plain] = true if !SpiritHands.color
           value.ai(opts)

@@ -1,6 +1,7 @@
 # encoding: UTF-8
 require 'readline'
 require 'spirit_hands/mattr_accessor_with_default'
+require 'spirit_hands/options/coolline'
 require 'spirit_hands/options/color'
 require 'spirit_hands/options/less'
 require 'spirit_hands/options/hirb'
@@ -56,4 +57,21 @@ module SpiritHands
 
   # Enable or disable AwesomePrint (default: true)
   mattr_accessor_with_default :awesome_print, true
+
+  def self.app_name
+    if app.class.respond_to?(:parent_name) && \
+       app.class.parent_name.respond_to?(:underscore)
+      app.class.parent_name.underscore
+    elsif app
+      app.to_s
+    else
+      ::SpiritHands.app
+    end
+  end
+
+  def self.config
+    c = SpiritHands.singleton_methods.select { |x| x != :config && x =~ /\A[a-z_]+\z/ }
+      .map { |k| [k, (k == :app) ? app_name : SpiritHands.public_send(k)] }
+    Hash[c]
+  end
 end
