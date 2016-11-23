@@ -17,6 +17,7 @@ require 'spirit_hands/melody'
 if defined? ::Rails
   require 'pry-rails'
   require 'spirit_hands/railtie'
+  Pry.plugin['rails'].activate!
 else
   SpiritHands.melody!
 end
