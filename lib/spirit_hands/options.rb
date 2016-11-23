@@ -70,8 +70,30 @@ module SpiritHands
   end
 
   def self.config
-    c = SpiritHands.singleton_methods.select { |x| x != :config && x =~ /\A[a-z_]+\z/ }
-      .map { |k| [k, (k == :app) ? app_name : SpiritHands.public_send(k)] }
+    c = CONFIG_KEYS.map do |k|
+      if k == :app
+        [k, app.to_s]
+      else
+        [k, public_send(k)]
+      end
+    end
     Hash[c]
   end
+
+  CONFIG_KEYS = [
+    :app,
+    :app_name,
+    :awesome_print,
+    :color,
+    :colored_prompt,
+    :coolline,
+    :hirb,
+    :hirb_unicode,
+    :less_colorize,
+    :less_show_raw_unicode,
+    :prompt,
+    :prompt_separator,
+    :value_indent,
+    :value_prompt,
+  ]
 end
