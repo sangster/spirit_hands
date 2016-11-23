@@ -78,6 +78,14 @@ characters in colored prompts. `false` for libedit.
 
 **Note:** `Pry.color = false` trumps this setting and disables all console coloring.
 
+### `coolline`
+
+Control whether pry-coolline is activated.
+
+~~Cooline is **enabled** by default.~~
+
+**NOTE** Pry-coolline is *currently disabled* by default because it doesn't support full Readline Vi and Emacs emulation. If you really want live syntax highlighting anyhow without full Readline support, specify `SpiritHands.coolline=true` in `~/.pryrc` after `require 'spirit_hands'`. Also, consider contributing a coolline/pry-coolline PR/fork if you must have this functionality.
+
 ### `hirb`
 [**Hirb**][hirb] is **enabled** by default.
 `SpiritHands.hirb = false` to disable.
