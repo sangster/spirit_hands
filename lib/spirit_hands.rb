@@ -5,9 +5,6 @@
 #      # ...
 #
 #
-module SpiritHands
-end
-
 require 'spirit_hands/options'
 require 'spirit_hands/print'
 require 'spirit_hands/prompt'
