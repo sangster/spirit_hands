@@ -1,9 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 $:.unshift File.expand_path('../lib', __FILE__)
-module ::SpiritHands
-  autoload :VERSION, 'spirit_hands/version'
-end
+require 'spirit_hands/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'spirit_hands'
