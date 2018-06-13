@@ -5,14 +5,11 @@
 #      # ...
 #
 #
-module SpiritHands
-  autoload :VERSION,  'spirit_hands/version'
-  autoload :Print,    'spirit_hands/print'
-  autoload :Prompt,   'spirit_hands/prompt'
-  autoload :Terminal, 'spirit_hands/terminal' 
-end
-
 require 'spirit_hands/options'
+require 'spirit_hands/print'
+require 'spirit_hands/prompt'
+require 'spirit_hands/terminal' 
+require 'spirit_hands/version'
 require 'spirit_hands/melody'
 if defined? ::Rails
   require 'pry-rails'

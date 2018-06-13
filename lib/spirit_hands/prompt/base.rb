@@ -1,6 +1,7 @@
+require 'spirit_hands/prompt/base/render'
+
 module SpiritHands
   module Prompt
-    autoload :Render, 'spirit_hands/prompt/base/render'
 
     class << self
       private
