@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.name          = 'spirit_hands'
   gem.version       = SpiritHands::VERSION
   gem.author        = 'Barry Allard'
-  gem.email         = 'barry.allard@gmail.com'
+  gem.email         = 'barry.allard [at] gmail [dot] com'
   gem.license       = 'MIT'
   gem.homepage      = 'https://github.com/steakknife/spirit_hands'
   gem.summary       = 'Exercise those fingers. Pry-based enhancements for the default Rails console.'
