@@ -145,7 +145,7 @@ module SpiritHands
       end
 
       def nontag_char(c)
-        if @escape
+        if instance_variable_defined?(:@escape) && @escape
           nontag_escaped_char(c)
         else
           nontag_unescaped_char(c)

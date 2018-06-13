@@ -7,6 +7,7 @@ module Hirb
   class Pager
     class << self
       # Pages using a configured or detected shell command.
+      remove_method :command_pager
       def command_pager(output, options={})
         if valid_pager_command?(pc = options[:pager_command])
           basic_pager(output, pc)
@@ -14,6 +15,7 @@ module Hirb
       end
 
       # Exposed to allow user-custom, external-driven formatting
+      remove_method :basic_pager
       def basic_pager(output, override_pager_command=nil)
         pc = basic_pager_command(override_pager_command)
         pager = IO.popen(pc, "w")
@@ -33,11 +35,13 @@ module Hirb
         @pager_command = pager_command_select(*commands)
       end
 
+      remove_method :pager_command
       def pager_command #:nodoc:
         @pager_command || pager_command_select
       end
 
       # Pages with a ruby-only pager which either pages or quits.
+      remove_method :default_pager
       def default_pager(output, options={})
         pager = new(options[:width], options[:height])
         while pager.activated_by?(output, options[:inspect])
@@ -59,6 +63,7 @@ module Hirb
       private
 
       #:stopdoc:
+      remove_method :valid_pager_command?
       def valid_pager_command?(cmd)
         cmd && Util.command_exists?(cmd.shellsplit[0])
       end
@@ -85,6 +90,7 @@ module Hirb
         end
       end
 
+      remove_method :continue_paging?
       def continue_paging?
         puts "=== Press enter/return to continue or q to quit: ==="
         !$stdin.gets.chomp[/q/i]
@@ -92,22 +98,28 @@ module Hirb
       #:startdoc:
     end # class methods
 
+    remove_method :width
+    remove_method :height
     attr_reader :width, :height, :options
 
+    remove_method :initialize
     def initialize(width, height, options={})
       resize(width, height)
       @options = options
     end
 
+    remove_method :pager_command
     def pager_command
       options[:pager_command] || self.class.pager_command
     end
 
     # Pages given string using configured pager.
+    remove_method :page
     def page(string, inspect_mode)
       self.class.page(string, inspect_mode, pager_command, @width, @height)
     end
 
+    remove_method :slice!
     def slice!(output, inspect_mode=false) #:nodoc:
       effective_height = @height - 2 # takes into account pager prompt
       if inspect_mode
@@ -123,10 +135,12 @@ module Hirb
     end
 
     # Determines if string should be paged based on configured width and height.
+    remove_method :activated_by?
     def activated_by?(string_to_page, inspect_mode=false)
       inspect_mode ? (String.size(string_to_page) > @height * @width) : (string_to_page.count("\n") > @height)
     end
 
+    remove_method :char_count
     if String.method_defined? :chars
       def char_count(string) #:nodoc:
         string.chars.count
@@ -137,6 +151,7 @@ module Hirb
       end
     end
 
+    remove_method :resize
     def resize(width, height) #:nodoc:
       @width, @height = View.determine_terminal_size(width, height)
     end

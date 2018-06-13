@@ -2,7 +2,7 @@ module SpiritHands
   class << self
     # Is coolline enabled?
     def coolline
-      @coolline = DEFAULT_COOLLINE if @coolline.nil?
+      @coolline = DEFAULT_COOLLINE if !instance_variable_defined?(:@coolline) || @coolline.nil?
       @coolline
     end
 
