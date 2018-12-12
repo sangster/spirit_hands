@@ -59,7 +59,12 @@ module SpiritHands
       # <.../>
       SINGLE_TAGS = {
         # <cmd/>: command number
-        'cmd' => ->(state) { state.pry.input_array.size },
+        'cmd' =>
+          lambda do |state|
+            pry = state.pry
+            (pry.respond_to?(:input_ring) ? pry.input_ring : pry.input_array)
+              .size
+          end,
 
         # <tgt/>: target string
         'tgt' => ->(state) {
