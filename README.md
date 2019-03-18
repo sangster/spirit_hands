@@ -144,3 +144,10 @@ mixed encodings.
 [changelog]:                https://github.com/steakknife/spirit_hands/blob/master/CHANGELOG.md
 [pry-nav]:                  https://github.com/nixme/pry-nav
 [pry-byebug]:               https://github.com/deivid-rodriguez/pry-byebug
+
+### Security
+
+```
+$ gem cert --add <(curl -Ls https://raw.githubusercontent.com/steakknife/spirit_hands/master/gem-public_cert.pem)
+$ gem install spirit_hands -P MediumSecurity
+```
