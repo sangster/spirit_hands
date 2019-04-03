@@ -1,3 +1,6 @@
+## Unreleased
+* Upgrade [pry-doc][pry-doc] to 1.0.0
+
 ## 2.1.0 (2016-11-19)
 * Remove [pry-remote][pry-remote]
 
